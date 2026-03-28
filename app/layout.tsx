@@ -11,7 +11,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Baltacı Gıda | Yöresel Lezzetler',
-  description: 'Rize yöresinden doğal ve geleneksel gıda ürünleri. Tereyağı, peynir, bal, reçel ve daha fazlası.',
+  description: 'Rize yöresinden doğal ve geleneksel gıda ürünleri. Tereyağı, peynir, bal, reçel, pekmez, çay ve daha fazlası.',
   generator: 'v0.app',
   icons: {
     icon: [

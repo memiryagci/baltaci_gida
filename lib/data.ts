@@ -16,23 +16,23 @@
  *        │   ├── hero-2.jpg
  *        │   └── hero-3.jpg
  *        ├── categories
+ *        │   ├── tereyagi.jpg
  *        │   ├── peynir.jpg
  *        │   ├── bal.jpg
  *        │   ├── recel.jpg
- *        │   ├── tereyagi.jpg
  *        │   ├── pekmez.jpg
  *        │   └── cay.jpg
  *        └── products
+ *            ├── rize-yayla-tereyagi.jpg
+ *            ├── rize-yemeklik-yayik-tereyagi.jpg
  *            ├── rize-tam-yagli-taze-kasar-peyniri.jpg
  *            ├── rize-tam-yagli-kolot-peyniri.jpg
  *            ├── rize-tam-yagli-tel-peynir.jpg
  *            ├── tam-yagli-kars-eski-kasar-peyniri.jpg
  *            ├── erzincan-tulum-peyniri.jpg
  *            ├── ezine-peyniri.jpg
- *            ├── rize-yayla-tereyagi.jpg
- *            ├── rize-yemeklik-yayik-tereyagi.jpg
- *            ├── ucel-recel.jpg
  *            ├── rize-cicek-bali.jpg
+ *            ├── ucel-recel.jpg
  *            ├── rize-hakiki-dut-pekmezi.jpg
  *            └── caykur-cay.jpg
  * 
@@ -72,9 +72,17 @@ export interface Product {
   slug: string;
   image: string;
   categorySlug: string;
+  /** Ürün detay sayfasında gösterilen paragraflar */
+  descriptionParagraphs: string[];
 }
 
 export const categories: Category[] = [
+  {
+    id: "tereyagi",
+    name: "Tereyağı",
+    slug: "tereyagi",
+    image: "/images/categories/tereyagi.jpg",
+  },
   {
     id: "peynir",
     name: "Peynir",
@@ -94,12 +102,6 @@ export const categories: Category[] = [
     image: "/images/categories/recel.jpg",
   },
   {
-    id: "tereyagi",
-    name: "Tereyağı",
-    slug: "tereyagi",
-    image: "/images/categories/tereyagi.jpg",
-  },
-  {
     id: "pekmez",
     name: "Pekmez",
     slug: "pekmez",
@@ -114,49 +116,6 @@ export const categories: Category[] = [
 ];
 
 export const products: Product[] = [
-  // Peynir
-  {
-    id: 1,
-    name: "Rize Tam Yağlı Taze Kaşar Peyniri",
-    slug: "rize-tam-yagli-taze-kasar-peyniri",
-    image: "/images/products/rize-tam-yagli-taze-kasar-peyniri.jpg",
-    categorySlug: "peynir",
-  },
-  {
-    id: 2,
-    name: "Rize Tam Yağlı Kolot Peyniri",
-    slug: "rize-tam-yagli-kolot-peyniri",
-    image: "/images/products/rize-tam-yagli-kolot-peyniri.jpg",
-    categorySlug: "peynir",
-  },
-  {
-    id: 3,
-    name: "Rize Tam Yağlı Tel Peynir",
-    slug: "rize-tam-yagli-tel-peynir",
-    image: "/images/products/rize-tam-yagli-tel-peynir.jpg",
-    categorySlug: "peynir",
-  },
-  {
-    id: 4,
-    name: "Tam Yağlı Kars Eski Kaşar Peyniri",
-    slug: "tam-yagli-kars-eski-kasar-peyniri",
-    image: "/images/products/tam-yagli-kars-eski-kasar-peyniri.jpg",
-    categorySlug: "peynir",
-  },
-  {
-    id: 5,
-    name: "Erzincan Tulum Peyniri",
-    slug: "erzincan-tulum-peyniri",
-    image: "/images/products/erzincan-tulum-peyniri.jpg",
-    categorySlug: "peynir",
-  },
-  {
-    id: 6,
-    name: "Ezine Peyniri",
-    slug: "ezine-peyniri",
-    image: "/images/products/ezine-peyniri.jpg",
-    categorySlug: "peynir",
-  },
   // Tereyağı
   {
     id: 7,
@@ -164,6 +123,10 @@ export const products: Product[] = [
     slug: "rize-yayla-tereyagi",
     image: "/images/products/rize-yayla-tereyagi.jpg",
     categorySlug: "tereyagi",
+    descriptionParagraphs: [
+      "Rize’nin yaylalarında otlatılan hayvanlardan elde edilen sütlerle üretimini yaptığımız yayla tereyağı, Baltacı Gıda’nın doğallık ve şeffaflık ilkeleriyle sofralarınıza ulaşır.",
+      "İmalatını gerçekleştirdiğimiz Rize yayla tereyağı, 1. sınıf kalite anlayışıyla; katkısız, geleneksel yöntemlerle işlenir. Kahvaltılardan tatlılara, yöresel tariflerden profesyonel mutfaklara kadar güvenle kullanılabilecek yoğun aroması ve kıvamıyla öne çıkar.",
+    ],
   },
   {
     id: 8,
@@ -171,14 +134,77 @@ export const products: Product[] = [
     slug: "rize-yemeklik-yayik-tereyagi",
     image: "/images/products/rize-yemeklik-yayik-tereyagi.jpg",
     categorySlug: "tereyagi",
+    descriptionParagraphs: [
+      "Yöresel yayık tereyağı üretimi, sütün özenle işlenmesi ve geleneksel tekniklerle yoğunlaştırılmasıyla elde edilen, mutfakta çok yönlü kullanılan bir lezzettir.",
+      "Rize yemeklik yayık tereyağımız; kızartmalardan pilavlara, hamur işlerinden soslara kadar geniş bir kullanım alanı sunar. Doğal süt kaynağı ve kontrollü üretim sayesinde aroması dengeli, yapısı homojen ürünler sunmayı hedefleriz.",
+    ],
   },
-  // Reçel
+  // Peynir
   {
-    id: 9,
-    name: "Üçel Reçel",
-    slug: "ucel-recel",
-    image: "/images/products/ucel-recel.jpg",
-    categorySlug: "recel",
+    id: 1,
+    name: "Rize Tam Yağlı Taze Kaşar Peyniri",
+    slug: "rize-tam-yagli-taze-kasar-peyniri",
+    image: "/images/products/rize-tam-yagli-taze-kasar-peyniri.jpg",
+    categorySlug: "peynir",
+    descriptionParagraphs: [
+      "Rize’nin yaylalarında toplanan sütlerden üretimini yaptığımız peynir ürünlerimiz, Baltacı Gıda kalite ve hijyen standartlarıyla hazırlanır.",
+      "İmalatını gerçekleştirdiğimiz Rize tam yağlı taze kaşar peyniri 1. sınıf, %100 doğal üretim ilkeleriyle olgunlaştırılır. Erimiş kıvamı ve dengeli tadıyla hem soğuk hem sıcak kullanımda sofralarınıza lezzet katar.",
+    ],
+  },
+  {
+    id: 2,
+    name: "Rize Tam Yağlı Kolot Peyniri",
+    slug: "rize-tam-yagli-kolot-peyniri",
+    image: "/images/products/rize-tam-yagli-kolot-peyniri.jpg",
+    categorySlug: "peynir",
+    descriptionParagraphs: [
+      "Yöresel kolot peyniri, Rize mutfağının sevilen lezzetlerinden biridir; sütün özenle işlenmesi ve geleneksel üretim adımlarıyla karakteristik dokusu oluşur.",
+      "Tam yağlı kolot peynirimiz; dilimlenebilir yapısı ve aromasıyla kahvaltılardan atıştırmalıklara kadar geniş kullanım sunar. Doğal içerik ve kontrollü üretim anlayışıyla hazırlanır.",
+    ],
+  },
+  {
+    id: 3,
+    name: "Rize Tam Yağlı Tel Peynir",
+    slug: "rize-tam-yagli-tel-peynir",
+    image: "/images/products/rize-tam-yagli-tel-peynir.jpg",
+    categorySlug: "peynir",
+    descriptionParagraphs: [
+      "Tel peynir, lif lif yapısı ve esnek dokusuyla hem pratik hem de lezzetli bir peynir çeşididir; Rize’nin süt kalitesiyle birleşince sofralarda fark yaratır.",
+      "Rize tam yağlı tel peynirimiz; omletlerden böreklere, salatalardan tostlara kadar birçok tarifte güvenle kullanılabilir. Katkısız üretim ve tazelik odaklı tedarik yaklaşımımızın bir parçasıdır.",
+    ],
+  },
+  {
+    id: 4,
+    name: "Tam Yağlı Kars Eski Kaşar Peyniri",
+    slug: "tam-yagli-kars-eski-kasar-peyniri",
+    image: "/images/products/tam-yagli-kars-eski-kasar-peyniri.jpg",
+    categorySlug: "peynir",
+    descriptionParagraphs: [
+      "Eski kaşar, uzun süreli olgunlaştırma ile derinleşen aroması ve sert-kırılgan dokusuyla peynir severlerin klasik tercihlerinden biridir.",
+      "Tam yağlı Kars eski kaşar peynirimiz; kahvaltı sofralarından peynir tabaklarına, eritme ve ızgara kullanımlarına kadar güçlü bir tat profili sunar. Saklama koşullarına uygun şekilde tedarik edilerek lezzetini korumayı hedefleriz.",
+    ],
+  },
+  {
+    id: 5,
+    name: "Erzincan Tulum Peyniri",
+    slug: "erzincan-tulum-peyniri",
+    image: "/images/products/erzincan-tulum-peyniri.jpg",
+    categorySlug: "peynir",
+    descriptionParagraphs: [
+      "Tulum peyniri, geleneksel olgunlaştırma ve doğal ambalajlama kültürüyle üretilen, kokusu ve aromasıyla karakteristik bir üründür.",
+      "Erzincan tulum peynirimiz; yöresel üretim geleneğinden ilham alan bir lezzet profili sunar. Dilimleme, rendeleme veya doğrudan tüketim için uygun yapısıyla profesyonel mutfakların da sık tercih ettiği ürünler arasındadır.",
+    ],
+  },
+  {
+    id: 6,
+    name: "Ezine Peyniri",
+    slug: "ezine-peyniri",
+    image: "/images/products/ezine-peyniri.jpg",
+    categorySlug: "peynir",
+    descriptionParagraphs: [
+      "Ezine peyniri, coğrafi işaret kültürüyle de öne çıkan, dengeli tuzluluğu ve kokusuyla tanınan bir peynir çeşididir.",
+      "Sofralık kullanımda öne çıkan Ezine peynirimiz; kahvaltılardan peynir seçkilerine kadar geniş bir kullanım alanı sunar. Baltacı Gıda olarak ürün seçiminden paketlemeye kadar süreçlerde kalite kontrolünü ön planda tutarız.",
+    ],
   },
   // Bal
   {
@@ -187,6 +213,23 @@ export const products: Product[] = [
     slug: "rize-cicek-bali",
     image: "/images/products/rize-cicek-bali.jpg",
     categorySlug: "bal",
+    descriptionParagraphs: [
+      "Doğanın en saf armağanlarından biri olan çiçek balı, Rize’nin zengin bitki örtüsü ve yüksek rakımlı yaylalarında, arıların doğal polinasyon döngüsüyle üretilir.",
+      "Rize çiçek balımız; bölgenin florasından gelen çiçek çeşitliliği sayesinde dengeli bir aroma profili sunmayı hedefler. Katkısız, doğal süzüm ve kontrollü tedarik anlayışıyla profesyonel mutfakların ve perakende tüketicinin güvenilir tercihlerinden biri olmayı amaçlar.",
+    ],
+  },
+  // Reçel
+  {
+    id: 9,
+    name: "Üçel Reçel",
+    slug: "ucel-recel",
+    image: "/images/products/ucel-recel.jpg",
+    categorySlug: "recel",
+    descriptionParagraphs: [
+      "“Üçel Reçel”",
+      "Üçel Reçel, lezzet tutkunlarının sofralarına doğal tatlar kazandırmak için özenle hazırlanmıştır. Yöresel lezzetleri koruyan bu reçelin her kavanozu, seçilmiş meyvelerden ve doğal içeriklerle, deneyimli üretim anlayışıyla hazırlanır.",
+      "Çiftlikten sofraya yolculuğunda gereksiz katkı kullanılmadan üretilmeyi hedefleyen Üçel Reçel, kahvaltıların ve tatlıların vazgeçilmezlerinden biri olmaya adaydır. Yoğun meyve hissini hissettiğiniz her lokmada, geleneksel reçel yapımına olan bağlılığımızı hissetmenizi isteriz.",
+    ],
   },
   // Pekmez
   {
@@ -195,6 +238,10 @@ export const products: Product[] = [
     slug: "rize-hakiki-dut-pekmezi",
     image: "/images/products/rize-hakiki-dut-pekmezi.jpg",
     categorySlug: "pekmez",
+    descriptionParagraphs: [
+      "Hakiki dut pekmezi, geleneksel pişirme ve yoğunlaştırma yöntemleriyle elde edilen, koyu kıvamı ve karakteristik aromasıyla tanınan bir yöresel üründür.",
+      "Rize hakiki dut pekmezi; kahvaltılardan tatlılara, sütlü tatlılardan soslara kadar geniş kullanım sunar. Doğal hammaddeler ve kontrollü üretim süreçleriyle, profesyonel mutfakların dengeli ve güvenilir bir bileşeni olmayı hedefler.",
+    ],
   },
   // Çay
   {
@@ -203,6 +250,12 @@ export const products: Product[] = [
     slug: "caykur-cay",
     image: "/images/products/caykur-cay.jpg",
     categorySlug: "cay",
+    descriptionParagraphs: [
+      "Günün her saati demlenebilecek, dengeli tat ve aroma profiline sahip bir harmandır. Kalitesi, ideal dem süresi ve lezzetli aromasıyla pekiştirilen Çaykur çayımız, hoş içimiyle sofralarınıza ve işletmenize sıcak bir ikram sunar.",
+      "İçinde gereksiz katkılar yerine; doğru saklama ve taze kullanım önerileriyle birlikte sunulmayı hedefler. Üretim ve dağıtım süreçlerinde markanın standartlarına uygun hareket ederek güvenilir tedarik sağlarız.",
+      "Çay, özellikle içerdiği doğal bileşenler açısından araştırmalarda mercek altına alınan bir içecektir. Bazı çalışmalar; düzenli çay tüketiminin yaşam tarzı ve beslenme düzeni ile birlikte değerlendirildiğinde olumlu etkilerden söz edebilir. Kalp sağlığı, zihinsel uyanıklık ve metabolizma gibi konularda ise bireysel farklılıklar olduğunu ve tıbbi tavsiye gerektiren durumlarda uzman görüşünün önemli olduğunu hatırlatırız.",
+      "Baltacı Gıda olarak amacımız; işletmelere uygun fiyat ve sürdürülebilir tedarik ile kaliteli çay sunmaktır. Rize’nin çay kültürüyle uyumlu, güvenilir bir iş ortağı olmaya devam ediyoruz.",
+    ],
   },
 ];
 
@@ -235,4 +288,8 @@ export function getProductsByCategory(categorySlug: string): Product[] {
 
 export function getCategoryBySlug(slug: string): Category | undefined {
   return categories.find((category) => category.slug === slug);
+}
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((product) => product.slug === slug);
 }

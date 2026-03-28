@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const paragraphs = [
   "Baltacı Gıda, gıda sektöründe kalite ve güveni ön planda tutarak faaliyet gösteren bir tedarik firmasıdır. Kurucumuz Emirhan Baltacı, girişimcilik vizyonu ve ticari disipliniyle sektöre güçlü bir adım atmıştır.",
   "Emirhan Baltacı, özellikle toptan gıda tedariki alanında işletmelerin ihtiyaçlarını yakından analiz ederek; hızlı, güvenilir ve sürdürülebilir bir tedarik sistemi oluşturmayı hedeflemiştir. Müşteri memnuniyetini esas alan yaklaşımı sayesinde Baltacı Gıda, kısa sürede restoranlar, kafeler ve çeşitli işletmeler için güvenilir bir iş ortağı haline gelmiştir.",
-  "Başta tereyağı, bal, peynir ve kahvaltılık ürünler olmak üzere geniş ürün yelpazemizle profesyonel mutfaklara hizmet sunuyoruz. Ürünlerimizin seçiminden teslimatına kadar her aşamada kalite standartlarına uygun hareket ediyoruz.",
+  "Başta tereyağı, peynir, bal, reçel, pekmez ve çay olmak üzere; kahvaltılık ürünler dahil geniş ürün yelpazemizle profesyonel mutfaklara hizmet sunuyoruz. Ürünlerimizin seçiminden teslimatına kadar her aşamada kalite standartlarına uygun hareket ediyoruz.",
   "Baltacı Gıda olarak amacımız; uygun fiyat, yüksek kalite ve hızlı hizmet anlayışıyla sektörde kalıcı ve güvenilir bir marka olmaktır.",
   "Emirhan Baltacı liderliğinde, her geçen gün büyüyen yapımızla müşterilerimize en iyi hizmeti sunmaya devam ediyoruz.",
 ];

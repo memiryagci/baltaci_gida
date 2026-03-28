@@ -62,9 +62,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         {/* Products Grid */}
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {categoryProducts.map((product) => (
-            <div
+            <Link
               key={product.id}
-              className="group overflow-hidden rounded-lg border border-border bg-card"
+              href={`/urun/${product.slug}`}
+              className="group block overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               <div className="aspect-square overflow-hidden">
                 <Image
@@ -76,11 +77,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-center font-medium text-card-foreground">
+                <h3 className="text-center font-medium text-card-foreground group-hover:text-primary">
                   {product.name}
                 </h3>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
