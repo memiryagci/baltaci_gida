@@ -50,7 +50,7 @@ export function HeroCarousel() {
             Yöresel Lezzetler
           </h1>
           <p className="mt-4 text-lg text-white/90 drop-shadow sm:text-xl">
-            Doğal ve geleneksel ürünlerimizle sofralarınıza lezzet katıyoruz
+            Doğal ve Geleneksel Ürünlerle İşletmenize Lezzet Katıyoruz
           </p>
         </div>
       </div>

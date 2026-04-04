@@ -8,6 +8,19 @@ export default function HomePage() {
     <>
       <HeroCarousel />
 
+      <section className="border-t border-border bg-secondary py-14 sm:py-16">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
+            Baltacı Gıda Ayrıcalığını Keşfedin
+          </h2>
+          <ul className="mt-8 space-y-4 text-lg text-muted-foreground sm:text-xl">
+            <li>İşletmenize Özel Çözümler</li>
+            <li>Soğuk Zincir ile Güvenli Teslimat.</li>
+            <li>%100 Doğal ve Katkısız Ürünler</li>
+          </ul>
+        </div>
+      </section>
+
       {/* Categories Section */}
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

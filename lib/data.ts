@@ -16,25 +16,12 @@
  *        │   ├── hero-2.jpg
  *        │   └── hero-3.jpg
  *        ├── categories
- *        │   ├── tereyagi.jpg
- *        │   ├── peynir.jpg
- *        │   ├── bal.jpg
- *        │   ├── recel.jpg
- *        │   ├── pekmez.jpg
- *        │   └── cay.jpg
+ *        │   ├── tereyagi.jpg, peynir.jpg, zeytin.jpg, bal.jpg, recel.jpg,
+ *        │   ├── pekmez.jpg, tahin.jpg, helva.jpg, cay.jpg
  *        └── products
- *            ├── rize-yayla-tereyagi.jpg
- *            ├── rize-yemeklik-yayik-tereyagi.jpg
- *            ├── rize-tam-yagli-taze-kasar-peyniri.jpg
- *            ├── rize-tam-yagli-kolot-peyniri.jpg
- *            ├── rize-tam-yagli-tel-peynir.jpg
- *            ├── tam-yagli-kars-eski-kasar-peyniri.jpg
- *            ├── erzincan-tulum-peyniri.jpg
- *            ├── ezine-peyniri.jpg
- *            ├── rize-cicek-bali.jpg
- *            ├── ucel-recel.jpg
- *            ├── rize-hakiki-dut-pekmezi.jpg
- *            └── caykur-cay.jpg
+ *            ├── ... (mevcut ürünler)
+ *            ├── kahvaltilik-gemlik-siyah-zeytin.jpg
+ *            └── gemlik-izgara-yesil-zeytin.jpg
  * 
  * 2. GÖRSEL URL'LERİNİ GÜNCELLEME:
  *    Unsplash URL'lerini yerel dosya yollarıyla değiştirin:
@@ -90,6 +77,12 @@ export const categories: Category[] = [
     image: "/images/categories/peynir.jpg",
   },
   {
+    id: "zeytin",
+    name: "Zeytin",
+    slug: "zeytin",
+    image: "/images/categories/zeytin.jpg",
+  },
+  {
     id: "bal",
     name: "Bal",
     slug: "bal",
@@ -106,6 +99,18 @@ export const categories: Category[] = [
     name: "Pekmez",
     slug: "pekmez",
     image: "/images/categories/pekmez.jpg",
+  },
+  {
+    id: "tahin",
+    name: "Tahin",
+    slug: "tahin",
+    image: "/images/categories/tahin.jpg",
+  },
+  {
+    id: "helva",
+    name: "Helva",
+    slug: "helva",
+    image: "/images/categories/helva.jpg",
   },
   {
     id: "cay",
@@ -206,6 +211,29 @@ export const products: Product[] = [
       "Sofralık kullanımda öne çıkan Ezine peynirimiz; kahvaltılardan peynir seçkilerine kadar geniş bir kullanım alanı sunar. Baltacı Gıda olarak ürün seçiminden paketlemeye kadar süreçlerde kalite kontrolünü ön planda tutarız.",
     ],
   },
+  // Zeytin
+  {
+    id: 13,
+    name: "Kahvaltılık Gemlik Siyah Zeytin",
+    slug: "kahvaltilik-gemlik-siyah-zeytin",
+    image: "/images/products/kahvaltilik-gemlik-siyah-zeytin.jpg",
+    categorySlug: "zeytin",
+    descriptionParagraphs: [
+      "Gemlik bölgesinin karakteristik siyah zeytini, kahvaltı sofralarının ve profesyonel mutfakların vazgeçilmez lezzetlerinden biridir.",
+      "Kahvaltılık Gemlik siyah zeytinimiz; olgunlaşmış meyve seçimi ve kontrollü işleme ile dengeli tuzluluk ve yumuşak doku sunmayı hedefler. İşletmelere toptan tedarikte istikrarlı kalite ve güvenilir stok anlayışıyla hizmet veririz.",
+    ],
+  },
+  {
+    id: 14,
+    name: "Gemlik Izgara Yeşil Zeytin",
+    slug: "gemlik-izgara-yesil-zeytin",
+    image: "/images/products/gemlik-izgara-yesil-zeytin.jpg",
+    categorySlug: "zeytin",
+    descriptionParagraphs: [
+      "Izgara yeşil zeytin, hafif duman aroması ve gevrek dokusuyla salatalardan tabak süslemelerine kadar geniş kullanım alanı sunar.",
+      "Gemlik ızgara yeşil zeytin ürünümüz; kahvaltılık ve servis ürünleri için pratik ve lezzetli bir seçenektir. Doğal içerik ve profesyonel mutfak beklentilerine uygun tedarik için Baltacı Gıda güvencesiyle sunulur.",
+    ],
+  },
   // Bal
   {
     id: 10,
@@ -251,10 +279,9 @@ export const products: Product[] = [
     image: "/images/products/caykur-cay.jpg",
     categorySlug: "cay",
     descriptionParagraphs: [
-      "Günün her saati demlenebilecek, dengeli tat ve aroma profiline sahip bir harmandır. Kalitesi, ideal dem süresi ve lezzetli aromasıyla pekiştirilen Çaykur çayımız, hoş içimiyle sofralarınıza ve işletmenize sıcak bir ikram sunar.",
-      "İçinde gereksiz katkılar yerine; doğru saklama ve taze kullanım önerileriyle birlikte sunulmayı hedefler. Üretim ve dağıtım süreçlerinde markanın standartlarına uygun hareket ederek güvenilir tedarik sağlarız.",
-      "Çay, özellikle içerdiği doğal bileşenler açısından araştırmalarda mercek altına alınan bir içecektir. Bazı çalışmalar; düzenli çay tüketiminin yaşam tarzı ve beslenme düzeni ile birlikte değerlendirildiğinde olumlu etkilerden söz edebilir. Kalp sağlığı, zihinsel uyanıklık ve metabolizma gibi konularda ise bireysel farklılıklar olduğunu ve tıbbi tavsiye gerektiren durumlarda uzman görüşünün önemli olduğunu hatırlatırız.",
-      "Baltacı Gıda olarak amacımız; işletmelere uygun fiyat ve sürdürülebilir tedarik ile kaliteli çay sunmaktır. Rize’nin çay kültürüyle uyumlu, güvenilir bir iş ortağı olmaya devam ediyoruz.",
+      "Yavuzköy topraklarında özenle yetiştirdiğimiz çay yaprakları, doğanın sunduğu en saf haliyle toplanarak titizlikle işlenir. Karadeniz’in eşsiz iklimi ve verimli topraklarının kazandırdığı aroma ve kalite, Çaykur güvencesiyle buluşarak sizlere ulaştırılmaktadır.",
+      "Üretimden tüketime kadar her aşamada kalite, hijyen ve sürdürülebilirlik ilkelerini benimseyen anlayışımızla, doğallığı koruyan ve lezzeti ön planda tutan bir hizmet sunuyoruz. Her bardakta hissedilen yoğun aroma, berrak renk ve eşsiz tat, yılların deneyimi ve emeğinin bir yansımasıdır.",
+      "İşletmelere ve profesyonel mutfaklara özel çözümlerimizle, güvenilir tedarik, istikrarlı kalite ve hızlı teslimat avantajı sağlıyoruz. Doğallık, güven ve eşsiz lezzet, her yudumda kendini hissettirir.",
     ],
   },
 ];
