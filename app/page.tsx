@@ -9,7 +9,7 @@ export default function HomePage() {
     <>
       <HeroCarousel />
 
-      <section className="border-t border-border bg-secondary py-14 sm:py-16">
+      <section className="border-t border-border bg-white py-14 sm:py-16 dark:bg-background">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
             Baltacı Gıda Ayrıcalığını Keşfedin
@@ -19,7 +19,7 @@ export default function HomePage() {
       </section>
 
       {/* Categories Section */}
-      <section className="py-16 sm:py-20 lg:py-24">
+      <section id="kategoriler" className="py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
