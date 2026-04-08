@@ -510,8 +510,8 @@ export const contactInfo = {
   instagram: "@baltacigida",
   instagramUrl: "https://instagram.com/baltacigida",
   email: "baltacigida53@gmail.com",
-  phone: "+90 536 579 43 97",
-  whatsappUrl: "https://wa.me/905365794397",
+  phone: "+90 531 872 34 53",
+  whatsappUrl: "https://wa.me/905318723453",
 };
 
 export function getProductsByCategory(categorySlug: string): Product[] {
