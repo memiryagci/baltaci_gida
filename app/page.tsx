@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { categories } from "@/lib/data";
 import { HeroCarousel } from "@/components/hero-carousel";
+import { HomePrivilegesRotator } from "@/components/home-privileges-rotator";
 
 export default function HomePage() {
   return (
@@ -13,11 +14,7 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
             Baltacı Gıda Ayrıcalığını Keşfedin
           </h2>
-          <ul className="mt-8 space-y-4 text-lg text-muted-foreground sm:text-xl">
-            <li>İşletmenize Özel Çözümler</li>
-            <li>Soğuk Zincir ile Güvenli Teslimat.</li>
-            <li>%100 Doğal ve Katkısız Ürünler</li>
-          </ul>
+          <HomePrivilegesRotator />
         </div>
       </section>
 

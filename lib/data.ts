@@ -17,7 +17,7 @@
  *        │   └── hero-3.jpg
  *        ├── categories
  *        │   ├── tereyagi.jpg, peynir.jpg, zeytin.jpg, bal.jpg, recel.jpg,
- *        │   ├── pekmez.jpg, tahin.jpg, helva.jpg, cay.jpg
+ *        │   ├── pekmez.jpg, tahin.jpg, helva.jpg, sucuk.jpg, cay.jpg
  *        └── products
  *            ├── ... (mevcut ürünler)
  *            ├── kahvaltilik-gemlik-siyah-zeytin.jpg
@@ -111,6 +111,12 @@ export const categories: Category[] = [
     name: "Helva",
     slug: "helva",
     image: "/images/categories/helva.jpg",
+  },
+  {
+    id: "sucuk",
+    name: "Sucuk",
+    slug: "sucuk",
+    image: "/images/categories/sucuk.jpg",
   },
   {
     id: "cay",
@@ -211,6 +217,17 @@ export const products: Product[] = [
       "Sofralık kullanımda öne çıkan Ezine peynirimiz; kahvaltılardan peynir seçkilerine kadar geniş bir kullanım alanı sunar. Baltacı Gıda olarak ürün seçiminden paketlemeye kadar süreçlerde kalite kontrolünü ön planda tutarız.",
     ],
   },
+  {
+    id: 15,
+    name: "Edirne Tam Yağlı Yumuşak Beyaz Peynir",
+    slug: "edirne-tam-yagli-yumusak-beyaz-peynir",
+    image: "/images/products/edirne-tam-yagli-yumusak-beyaz-peynir.jpg",
+    categorySlug: "peynir",
+    descriptionParagraphs: [
+      "Edirne’nin yumuşak beyaz peynir geleneği, kahvaltı sofralarının ve profesyonel mutfakların sevilen lezzetlerinden biridir; tam yağlı içerik ve yumuşak doku dengesi öne çıkar.",
+      "Edirne tam yağlı yumuşak beyaz peynirimiz; salatalardan böreklere, ızgara ve sıcak servislere kadar geniş kullanım sunar. Baltacı Gıda olarak toptan tedarikte süreklilik ve hijyen standartlarına uygun hareket ederiz.",
+    ],
+  },
   // Zeytin
   {
     id: 13,
@@ -236,52 +253,240 @@ export const products: Product[] = [
   },
   // Bal
   {
-    id: 10,
-    name: "Rize Çiçek Balı",
-    slug: "rize-cicek-bali",
-    image: "/images/products/rize-cicek-bali.jpg",
+    id: 20,
+    name: "Rize Ovit Yaylası Çiçek Balı",
+    slug: "rize-ovit-yaylasi-cicek-bali",
+    image: "/images/products/rize-ovit-yaylasi-cicek-bali.jpg",
     categorySlug: "bal",
     descriptionParagraphs: [
-      "Doğanın en saf armağanlarından biri olan çiçek balı, Rize’nin zengin bitki örtüsü ve yüksek rakımlı yaylalarında, arıların doğal polinasyon döngüsüyle üretilir.",
-      "Rize çiçek balımız; bölgenin florasından gelen çiçek çeşitliliği sayesinde dengeli bir aroma profili sunmayı hedefler. Katkısız, doğal süzüm ve kontrollü tedarik anlayışıyla profesyonel mutfakların ve perakende tüketicinin güvenilir tercihlerinden biri olmayı amaçlar.",
+      "Rize Ovit Yaylası’nın zengin florasında üretilen çiçek balı, yüksek rakım ve temiz hava koşullarının katkısıyla dengeli bir aroma profili sunar.",
+      "Doğal süzüm ve kontrollü tedarik anlayışıyla işletmelere sunulan bu ürün; kahvaltılardan pastane ve mutfak kullanımlarına kadar güvenilir bir seçenektir.",
+    ],
+  },
+  {
+    id: 21,
+    name: "Rize Ovit Yaylası Teneke Çiçek Balı",
+    slug: "rize-ovit-yaylasi-teneke-cicek-bali",
+    image: "/images/products/rize-ovit-yaylasi-teneke-cicek-bali.jpg",
+    categorySlug: "bal",
+    descriptionParagraphs: [
+      "Ovit Yaylası çiçek balının teneke ambalajlı seçeneği, profesyonel mutfaklar ve yoğun tüketim yapan işletmeler için pratik saklama ve kullanım kolaylığı sunar.",
+      "Aynı doğal içerik ve lezzet anlayışıyla; toptan tedarik, düzenli stok ve hijyen odaklı lojistik ile Baltacı Gıda güvencesiyle ulaştırılır.",
+    ],
+  },
+  {
+    id: 22,
+    name: "Rize Kaçkar Yaylası Çiçek Balı",
+    slug: "rize-kackar-yaylasi-cicek-bali",
+    image: "/images/products/rize-kackar-yaylasi-cicek-bali.jpg",
+    categorySlug: "bal",
+    descriptionParagraphs: [
+      "Kaçkar Yaylası’nın doğal bitki örtüsü ve iklimi, çiçek balına karakteristik bir tat ve koku kazandırır.",
+      "Rize Kaçkar Yaylası çiçek balımız; doğallığı ön planda tutan işletmeler için güvenilir bir tercihtir. Katkısız üretim hedefi ve kalite kontrol süreçlerimizle desteklenir.",
     ],
   },
   // Reçel
   {
-    id: 9,
-    name: "Üçel Reçel",
-    slug: "ucel-recel",
-    image: "/images/products/ucel-recel.jpg",
+    id: 23,
+    name: "Üçel Çilek Reçeli",
+    slug: "ucel-cilek-receli",
+    image: "/images/products/ucel-cilek-receli.jpg",
     categorySlug: "recel",
     descriptionParagraphs: [
-      "“Üçel Reçel”",
-      "Üçel Reçel, lezzet tutkunlarının sofralarına doğal tatlar kazandırmak için özenle hazırlanmıştır. Yöresel lezzetleri koruyan bu reçelin her kavanozu, seçilmiş meyvelerden ve doğal içeriklerle, deneyimli üretim anlayışıyla hazırlanır.",
-      "Çiftlikten sofraya yolculuğunda gereksiz katkı kullanılmadan üretilmeyi hedefleyen Üçel Reçel, kahvaltıların ve tatlıların vazgeçilmezlerinden biri olmaya adaydır. Yoğun meyve hissini hissettiğiniz her lokmada, geleneksel reçel yapımına olan bağlılığımızı hissetmenizi isteriz.",
+      "Üçel Çilek Reçeli, taze çilek lezzetini kahvaltı ve tatlılara taşıyan, geleneksel reçel yapım teknikleriyle hazırlanan bir üründür.",
+      "Yoğun meyve aroması ve doğal içerik anlayışıyla profesyonel mutfaklarda güvenle kullanılabilir. Baltacı Gıda olarak süreklilik ve standartlara uygun tedarik sunarız.",
+    ],
+  },
+  {
+    id: 24,
+    name: "Üçel Çilek Reçeli 10 Kg Kova",
+    slug: "ucel-cilek-receli-10-kg-kova",
+    image: "/images/products/ucel-cilek-receli-10-kg-kova.jpg",
+    categorySlug: "recel",
+    descriptionParagraphs: [
+      "10 kg kova ambalaj, oteller, catering ve büyük mutfaklar için ekonomik ve pratik kullanım sunar.",
+      "Üçel çilek reçelinin aynı lezzet profili; endüstriyel ölçekte hijyenik koşullarda işletmenize ulaştırılmayı hedefler.",
+    ],
+  },
+  {
+    id: 25,
+    name: "Üçel Vişne Reçeli",
+    slug: "ucel-visne-receli",
+    image: "/images/products/ucel-visne-receli.jpg",
+    categorySlug: "recel",
+    descriptionParagraphs: [
+      "Üçel Vişne Reçeli, hafif ekşimsi tadı ve yoğun meyve dokusuyla kahvaltı ve pastacılık ürünlerinde öne çıkar.",
+      "Doğal lezzet anlayışı ve güvenilir tedarik ile işletmelere yönelik çözümlerimizin parçasıdır.",
+    ],
+  },
+  {
+    id: 26,
+    name: "Üçel Vişne Reçeli 10 Kg Kova",
+    slug: "ucel-visne-receli-10-kg-kova",
+    image: "/images/products/ucel-visne-receli-10-kg-kova.jpg",
+    categorySlug: "recel",
+    descriptionParagraphs: [
+      "Vişne reçelinin 10 kg kova ambalajı, yüksek hacimli kullanım yapan işletmeler için uygundur.",
+      "Standart lezzet ve kıvamın korunması; depolama ve servis süreçlerinde pratiklik sağlar.",
+    ],
+  },
+  {
+    id: 27,
+    name: "Üçel Böğürtlen Reçeli",
+    slug: "ucel-bogurtlen-receli",
+    image: "/images/products/ucel-bogurtlen-receli.jpg",
+    categorySlug: "recel",
+    descriptionParagraphs: [
+      "Üçel Böğürtlen Reçeli, aromatik tadı ve koyu rengiyle tatlı ve kahvaltılık kullanımlarda dikkat çeker.",
+      "Profesyonel mutfakların doğal içerik beklentilerine uygun, güvenilir bir Üçel ürünüdür.",
+    ],
+  },
+  {
+    id: 28,
+    name: "Üçel Böğürtlen Reçeli 10 Kg Kova",
+    slug: "ucel-bogurtlen-receli-10-kg-kova",
+    image: "/images/products/ucel-bogurtlen-receli-10-kg-kova.jpg",
+    categorySlug: "recel",
+    descriptionParagraphs: [
+      "Böğürtlen reçelinin endüstriyel mutfaklar için 10 kg kova seçeneği, maliyet ve kullanım verimliliği sunar.",
+      "Üçel kalite çizgisiyle; düzenli tedarik ve hijyen standartlarına uygun sunum hedeflenir.",
     ],
   },
   // Pekmez
   {
-    id: 11,
-    name: "Rize Hakiki Dut Pekmezi",
-    slug: "rize-hakiki-dut-pekmezi",
-    image: "/images/products/rize-hakiki-dut-pekmezi.jpg",
+    id: 29,
+    name: "Üçel Üzüm Pekmezi",
+    slug: "ucel-uzum-pekmezi",
+    image: "/images/products/ucel-uzum-pekmezi.jpg",
     categorySlug: "pekmez",
     descriptionParagraphs: [
-      "Hakiki dut pekmezi, geleneksel pişirme ve yoğunlaştırma yöntemleriyle elde edilen, koyu kıvamı ve karakteristik aromasıyla tanınan bir yöresel üründür.",
-      "Rize hakiki dut pekmezi; kahvaltılardan tatlılara, sütlü tatlılardan soslara kadar geniş kullanım sunar. Doğal hammaddeler ve kontrollü üretim süreçleriyle, profesyonel mutfakların dengeli ve güvenilir bir bileşeni olmayı hedefler.",
+      "Üçel Üzüm Pekmezi, geleneksel pişirme ve yoğunlaştırma ile elde edilen, kahvaltı ve tatlılarda kullanılan klasik bir lezzettir.",
+      "Doğal üzüm kaynağı ve kontrollü üretim anlayışıyla işletmelere güvenilir pekmez tedariki sağlarız.",
+    ],
+  },
+  {
+    id: 30,
+    name: "Üçel Üzüm Pekmezi 1300 Gr",
+    slug: "ucel-uzum-pekmezi-1300-gr",
+    image: "/images/products/ucel-uzum-pekmezi-1300-gr.jpg",
+    categorySlug: "pekmez",
+    descriptionParagraphs: [
+      "1300 gr ambalaj, perakende ve orta ölçekli mutfaklar için kullanışlı bir seçenektir.",
+      "Üçel üzüm pekmezinin aynı lezzet ve kıvamı; pratik saklama ile birlikte sunulur.",
+    ],
+  },
+  {
+    id: 31,
+    name: "Üçel Üzüm Pekmezi 2500 Gr",
+    slug: "ucel-uzum-pekmezi-2500-gr",
+    image: "/images/products/ucel-uzum-pekmezi-2500-gr.jpg",
+    categorySlug: "pekmez",
+    descriptionParagraphs: [
+      "2500 gr ambalaj, daha yüksek tüketim hacmine sahip işletmeler için ekonomik çözüm sunar.",
+      "Kahvaltılık ve tatlı üretimlerinde süreklilik isteyen profesyonel mutfakların tercih edebileceği bir formattır.",
+    ],
+  },
+  // Tahin
+  {
+    id: 32,
+    name: "Üçel Tahin 1000 Gr",
+    slug: "ucel-tahin-1000-gr",
+    image: "/images/products/ucel-tahin-1000-gr.jpg",
+    categorySlug: "tahin",
+    descriptionParagraphs: [
+      "Üçel tahin, susamın özenle işlenmesiyle elde edilen, kıvamlı ve aromatik bir üründür.",
+      "1000 gr ambalaj; sos, humus ve kahvaltılık kullanımlar için pratik bir seçenektir.",
+    ],
+  },
+  {
+    id: 33,
+    name: "Üçel Tahin 2000 Gr",
+    slug: "ucel-tahin-2000-gr",
+    image: "/images/products/ucel-tahin-2000-gr.jpg",
+    categorySlug: "tahin",
+    descriptionParagraphs: [
+      "2000 gr tahin, orta ve büyük ölçekli mutfaklarda daha uzun süreli kullanım sunar.",
+      "Üçel kalitesiyle; homojen doku ve dengeli tat profili hedeflenir.",
+    ],
+  },
+  {
+    id: 34,
+    name: "Üçel Tahin 9 Kg Kova",
+    slug: "ucel-tahin-9-kg-kova",
+    image: "/images/products/ucel-tahin-9-kg-kova.jpg",
+    categorySlug: "tahin",
+    descriptionParagraphs: [
+      "9 kg kova ambalaj, endüstriyel mutfaklar ve yoğun tahin kullanan işletmeler için uygundur.",
+      "Toptan tedarikte süreklilik ve hijyen odaklı lojistik ile Baltacı Gıda güvencesiyle sunulur.",
+    ],
+  },
+  // Helva
+  {
+    id: 35,
+    name: "Üçel Kakaolu Helva",
+    slug: "ucel-kakaolu-helva",
+    image: "/images/products/ucel-kakaolu-helva.jpg",
+    categorySlug: "helva",
+    descriptionParagraphs: [
+      "Üçel Kakaolu Helva, geleneksel helva lezzetini kakaolu profille birleştirir; atıştırmalık ve kahvaltılık kullanıma uygundur.",
+      "Doğal içerik anlayışı ve güvenilir marka tedariki ile işletmelere sunulur.",
+    ],
+  },
+  {
+    id: 36,
+    name: "Üçel Sade Tahin Helva",
+    slug: "ucel-sade-tahin-helva",
+    image: "/images/products/ucel-sade-tahin-helva.jpg",
+    categorySlug: "helva",
+    descriptionParagraphs: [
+      "Sade tahin helva, tahinin yoğun aromasıyla öne çıkan klasik bir lezzettir.",
+      "Perakende ve mutfak kullanımları için Üçel güvencesiyle tedarik edilir.",
+    ],
+  },
+  // Sucuk
+  {
+    id: 37,
+    name: "Kahvaltılık Dana Kangal Sucuk",
+    slug: "kahvaltilik-dana-kangal-sucuk",
+    image: "/images/products/kahvaltilik-dana-kangal-sucuk.jpg",
+    categorySlug: "sucuk",
+    descriptionParagraphs: [
+      "Kangal formunda kahvaltılık dana sucuk, geleneksel baharat ve olgunlaştırma kültürüyle sofraların ve profesyonel mutfakların vazgeçilmezlerinden biridir.",
+      "Soğuk zincir ve hijyen standartlarına uygun tedarik anlayışıyla işletmenize güvenilir sunum hedefleriz.",
+    ],
+  },
+  {
+    id: 38,
+    name: "Dana Antrikot Sucuk",
+    slug: "dana-antrikot-sucuk",
+    image: "/images/products/dana-antrikot-sucuk.jpg",
+    categorySlug: "sucuk",
+    descriptionParagraphs: [
+      "Dana antrikot sucuk, seçilmiş et kısmı ve dengeli baharat karışımıyla öne çıkar; ızgara ve sıcak servislerde güçlü bir lezzet sunar.",
+      "Baltacı Gıda olarak toptan gıda tedarikinde kalite sürekliliği ve güvenilir stok yönetimiyle yanınızdayız.",
     ],
   },
   // Çay
   {
-    id: 12,
-    name: "Çaykur Çay",
-    slug: "caykur-cay",
-    image: "/images/products/caykur-cay.jpg",
+    id: 39,
+    name: "Çaykur Tiryaki Çayı",
+    slug: "caykur-tiryaki-cayi",
+    image: "/images/products/caykur-tiryaki-cayi.jpg",
     categorySlug: "cay",
     descriptionParagraphs: [
-      "Yavuzköy topraklarında özenle yetiştirdiğimiz çay yaprakları, doğanın sunduğu en saf haliyle toplanarak titizlikle işlenir. Karadeniz’in eşsiz iklimi ve verimli topraklarının kazandırdığı aroma ve kalite, Çaykur güvencesiyle buluşarak sizlere ulaştırılmaktadır.",
-      "Üretimden tüketime kadar her aşamada kalite, hijyen ve sürdürülebilirlik ilkelerini benimseyen anlayışımızla, doğallığı koruyan ve lezzeti ön planda tutan bir hizmet sunuyoruz. Her bardakta hissedilen yoğun aroma, berrak renk ve eşsiz tat, yılların deneyimi ve emeğinin bir yansımasıdır.",
-      "İşletmelere ve profesyonel mutfaklara özel çözümlerimizle, güvenilir tedarik, istikrarlı kalite ve hızlı teslimat avantajı sağlıyoruz. Doğallık, güven ve eşsiz lezzet, her yudumda kendini hissettirir.",
+      "Yavuzköy topraklarında özenle yetiştirilen çay yaprakları, doğanın sunduğu en saf haliyle toplanarak titizlikle işlenir. Karadeniz’in iklimi ve verimli topraklarının kazandırdığı aroma, Çaykur Tiryaki harmanıyla birleşerek yoğun dem ve karakteristik bir tat profili sunar.",
+      "Üretimden tüketime kadar kalite, hijyen ve sürdürülebilirlik ilkelerini benimseyen anlayışımızla işletmelere güvenilir tedarik sağlarız. Her bardakta berrak renk ve güçlü aroma hedeflenir.",
+    ],
+  },
+  {
+    id: 40,
+    name: "Çaykur Altınbaş Klasik",
+    slug: "caykur-altinbas-klasik",
+    image: "/images/products/caykur-altinbas-klasik.jpg",
+    categorySlug: "cay",
+    descriptionParagraphs: [
+      "Çaykur Altınbaş Klasik, geleneksel siyah çay içimini seven işletmeler ve sofralar için dengeli dem, hoş aroma ve sakin bir içim sunmayı hedefleyen bir üründür.",
+      "Karadeniz çay kültürüyle uyumlu bu harman; profesyonel mutfaklarda günlük demleme ihtiyaçlarında istikrarlı kalite ve Çaykur güvencesiyle Baltacı Gıda tedarik ağıyla ulaştırılır.",
     ],
   },
 ];
